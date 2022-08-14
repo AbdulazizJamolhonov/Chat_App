@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start">
+
+    <LinearLayout
+        android:id="@+id/linear_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/message_to"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="30"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:background="@drawable/message_to"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/image_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:src="@drawable/person" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_audio"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_to"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/audio_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/audio_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/audio_pause" />
+
+            <ImageView
+                android:id="@+id/audio_play"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/audio_play" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_video"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_to"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

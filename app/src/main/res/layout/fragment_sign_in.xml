@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_in_background"
+    tools:context=".Fragments.SignInFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingTop="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/black"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintBottom_toTopOf="@id/password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Login"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="@color/black"
+                app:hintAnimationEnabled="true"
+                app:layout_constraintBottom_toTopOf="@id/btnLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Password"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00D157"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:layout_constraintBottom_toTopOf="@id/btnSign"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSign"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00D157"
+                android:text="Sign Up"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

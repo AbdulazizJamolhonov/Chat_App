@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MessageFragment">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="#009EFF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/codial"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/action"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintStart_toEndOf="@id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.14" />
+
+        <LinearLayout
+            android:id="@+id/action"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Android 7"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+
+            <TextView
+                android:id="@+id/online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:text="offline"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/message"
+        app:layout_constraintTop_toBottomOf="@id/actionBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv">
+
+        <ImageView
+            android:id="@+id/sendFile"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:src="@drawable/ic_file"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/edtMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtMessage"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:cursorVisible="false"
+            android:hint="Message..."
+            android:padding="@dimen/_8sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageSend"
+            app:layout_constraintStart_toEndOf="@id/sendFile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageSend"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:src="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/edtMessage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

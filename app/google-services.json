@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "393779091600",
+    "project_id": "mychatapp-420b4",
+    "storage_bucket": "mychatapp-420b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393779091600:android:e63dc25e4615dacc1be015",
+        "android_client_info": {
+          "package_name": "developer.abdulaziz.mychatappfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393779091600-q1qrl3sfv8nfq3qled580o87fj1q0du0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6DWgUYCLrutqXTXsFTiK4pvuR6Qv_fnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393779091600-q1qrl3sfv8nfq3qled580o87fj1q0du0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

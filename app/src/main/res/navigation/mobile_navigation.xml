@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_signInFragment2"
+            app:destination="@id/signInFragment2" />
+        <action
+            android:id="@+id/action_signInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment2"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.SignInFragment2"
+        android:label="fragment_sign_in2"
+        tools:layout="@layout/fragment_sign_in2">
+        <action
+            android:id="@+id/action_signInFragment2_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_mainViewPagerItemFragment1"
+            app:destination="@id/mainViewPagerItemFragment1" />
+        <action
+            android:id="@+id/action_mainFragment_to_mainViewPagerItemFragment2"
+            app:destination="@id/mainViewPagerItemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainViewPagerItemFragment1"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.MainViewPagerItemFragment1"
+        android:label="fragment_main_view_pager_item1"
+        tools:layout="@layout/fragment_main_view_pager_item1">
+        <action
+            android:id="@+id/action_mainViewPagerItemFragment1_to_usersItemFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainViewPagerItemFragment2"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.MainViewPagerItemFragment2"
+        android:label="fragment_main_view_pager_item2"
+        tools:layout="@layout/fragment_main_view_pager_item2">
+        <action
+            android:id="@+id/action_mainViewPagerItemFragment2_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="developer.abdulaziz.mychatappfirebase.Fragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+</navigation>

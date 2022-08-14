@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_from"
+        android:maxLength="30"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_from"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/person"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linear_audio"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_from"
+        android:orientation="horizontal"
+        android:padding="@dimen/_4sdp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/audio_play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/audio_play" />
+
+        <ImageView
+            android:id="@+id/audio_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/audio_pause" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_video"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/message_from"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
